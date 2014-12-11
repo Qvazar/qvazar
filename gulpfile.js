@@ -26,7 +26,7 @@ gulp.task('jade-client', function() {
 		}))
 		.pipe(gulp.dest('build/dev/js/'))
 		.pipe(uglify())
-		.pipe(gulp.dest('build/dist/'));
+		.pipe(gulp.dest('build/dist/js/'));
 });
 
 gulp.task('js', function() {
@@ -34,7 +34,7 @@ gulp.task('js', function() {
 		.pipe(gulp.dest('build/dev/js/'))
 		.pipe(traceur({ modules: 'instantiate' }))
 		.pipe(uglify())
-		.pipe(gulp.dest('build/dist/'));
+		.pipe(gulp.dest('build/dist/js/'));
 });
 
 gulp.task('css', function() {
